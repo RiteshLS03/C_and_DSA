@@ -14,6 +14,5 @@ int fun(int n)
 
 int main()
 {
-
     printf("%d", fun(95));
 }
