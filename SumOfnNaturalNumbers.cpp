@@ -1,20 +1,25 @@
 #include <stdio.h>
 
-int sum = 0;
-int sumOfN(int n)
+int sum(int n)
 {
     if (n == 0)
     {
-        return sum + n;
+        return 0;
     }
-    else if (n == 1)
+    else
     {
-        return sum + n;
+        return sum(n - 1) + n;
     }
-    else if (n > 1)
-    {
-        return sumOfN(n - 1);
-    }
+}
+
+int main()
+{
+    int x = 5;
+
+    printf("%d", sum(x));
+
+    // printf("%d", x * (x + 1) / 2);
+    return 0;
 }
 
 // int sumOfN(int n)
@@ -26,12 +31,3 @@ int sumOfN(int n)
 //     }
 //     return sum;
 // }
-
-int main()
-{
-    int x = 5;
-
-    printf("%d", sumOfN(x));
-
-    // printf("%d", x * (x + 1) / 2);
-}
